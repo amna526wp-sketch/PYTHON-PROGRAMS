@@ -1,0 +1,17 @@
+class Student:
+    def __init__(self, name, gpa):   # constructor
+        self.name = name
+        self.gpa = gpa
+
+    def is_honors(self):
+        return self.gpa >= 3.5
+
+s = Student("Amna", 3.8)
+s.is_honors()   # True
+
+# Inheritance
+class GradStudent(Student):
+    def __init__(self, name, gpa, thesis):
+        super().__init__(name, gpa)
+        self.thesis = thesis
+
