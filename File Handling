@@ -1,0 +1,49 @@
+Error Handling
+try:
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print("Can't divide by zero:", e)
+finally:
+    print("Always runs")
+
+File Handling
+with open("data.txt", "w") as f:
+    f.write("Hello file")
+
+with open("data.txt", "r") as f:
+
+
+Modules & Packages
+import math
+math.sqrt(16)          # 4.0
+
+from datetime import datetime
+datetime.now()
+    content = f.read()
+
+Instance Variables & Instance Methods :
+Instance variable = a piece of data that belongs to ONE specific object,
+not to every object of that class.
+Instance method = a function that belongs to the class and can use/change that object's data.
+class Car:
+    def __init__(self, color, speed):
+        self.color = color      # instance variable
+        self.speed = speed      # instance variable
+
+    def honk(self):             # instance method
+        print(f"The {self.color} car says BEEP!")
+
+car1 = Car("red", 100)
+car2 = Car("blue", 80)
+
+car1.honk()   # The red car says BEEP!
+car2.honk()   # The blue car says BEEP!
+
+
+Accessing Object Attributes & Methods
+Once you build an object, you reach its data and actions using a dot .
+Rule of thumb: object.attribute gets data, object.method() runs an action
+print(car1.color)     # accessing an attribute -> red
+car1.honk()            # accessing/calling a method
+car1.speed = 120        # you can even change an attribute
+
