@@ -1,0 +1,17 @@
+#IF-ELSE
+if age >= 18:
+    print("Adult")
+elif age > 12:
+    print("Teen")
+else:
+    print("Child")
+
+# FOR LOOPS
+for i in range(5):        # 0,1,2,3,4
+    print(i)
+
+# WHILE LOOPS
+n = 5
+while n > 0:
+    print(n)
+    n -= 1
