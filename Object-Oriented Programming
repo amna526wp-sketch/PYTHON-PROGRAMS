@@ -15,3 +15,8 @@ class GradStudent(Student):
         super().__init__(name, gpa)
         self.thesis = thesis
 
+
+
+
+
+
