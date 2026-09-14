@@ -9,12 +9,64 @@ class Student:
 s = Student("Amna", 3.8)
 s.is_honors()   # True
 
+Encapsulation in Python (Public & Private)
+Encapsulation = locking the important data inside the object so outsiders can't mess it up directly. 
+Like a car's engine is hidden under the hood — you use the pedals, not your hands on the pistons
+Public attribute: anyone can touch it directly. Normal name (self.color).
+Private attribute: hidden from outside use. Name starts with __ (double underscore)
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance   # private — hidden
+
+    def show_balance(self):
+        print(f"Balance: {self.__balance}")
+
+acc = BankAccount(1000)
+acc.show_balance()      # works fine: Balance: 1000
+print(acc.__balance)    # ERROR! Can't touch private data directly 
+This protects the data nobody can accidentally set your bank balance to -9999 from outside
+
+
 # Inheritance
+Inheritance = a new class automatically gets the features of an existing class,
+then can add its own extras. Like "Car" is a general blueprint,
+and "SportsCar" is a special version that inherits everything from Car plus a turbo boost.
 class GradStudent(Student):
     def __init__(self, name, gpa, thesis):
         super().__init__(name, gpa)
         self.thesis = thesis
 
+OR 
+
+class Car:                       # parent class
+    def __init__(self, color):
+        self.color = color
+
+    def drive(self):
+        print("Driving normally")
+
+class SportsCar(Car):            # child class — inherits from Car
+    def turbo_boost(self):
+        print("VROOM! Turbo activated!")
+
+s = SportsCar("black")
+s.drive()          # inherited from Car -> Driving normally
+s.turbo_boost()     # its own new method -> VROOM! Turbo activated!
+
+Polymorphism in Python (Overriding in action)
+Polymorphism = "many forms." Different objects can respond to the same method call in their own unique way 
+you don't need to know exactly which type it is, you just call the method and it does the right thing.
+class Cat(Animal):
+    def sound(self):
+        print("Meow!")
+
+animals = [Dog(), Cat(), Animal()]
+
+for a in animals:
+    a.sound()
+# Woof woof!
+# Meow!
+# Some generic animal sound
 
 
 
