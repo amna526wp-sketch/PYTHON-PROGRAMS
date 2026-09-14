@@ -1,0 +1,10 @@
+def greet(name, greeting="Hello"):
+    return f"{greeting}, {name}!"
+
+greet("Amna")                  # "Hello, Amna!"
+greet("Amna", "Hi")             # "Hi, Amna!"
+
+# Lambda — one-line anonymous function
+#A lambda is just a function without a name, written in a single line.
+#It exists for cases where you need a quick, throwaway function and don't want to formally def one.
+square = lambda x: x * x
