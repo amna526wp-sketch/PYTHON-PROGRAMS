@@ -1,0 +1,37 @@
+# Syntax: lambda arguments: expression
+# Normal function
+def square(x):
+    return x * x
+
+# Lambda — does the exact same thing
+square = lambda x: x * x
+
+square(5)   # 25
+
+# Multiple arguments
+add = lambda a, b: a + b
+add(3, 4)   # 7
+
+# With a conditional (ternary style)
+check = lambda x: "even" if x % 2 == 0 else "odd"
+check(7)    # "odd"
+
+Why lambdas actually matter: passing functions as arguments
+You rarely assign a lambda to a variable like square above (if you're naming it, just use def — it's clearer).
+Lambdas shine when a function needs another function as input, just for a moment.
+Sorting with a custom key
+
+students = [("Amna", 3.8), ("Bilal", 3.2), ("Sara", 3.9)]
+
+students.sort(key=lambda s: s[1])   # sort by GPA (2nd item in tuple)
+# [('Bilal', 3.2), ('Amna', 3.8), ('Sara', 3.9)]\
+
+# map() — apply a function to every item
+nums = [1, 2, 3, 4]
+squared = list(map(lambda x: x**2, nums))
+# [1, 4, 9, 16]
+
+#filter() — keep items that match a condition
+nums = [1, 2, 3, 4, 5, 6]
+evens = list(filter(lambda x: x % 2 == 0, nums))
+# [2, 4, 6]
