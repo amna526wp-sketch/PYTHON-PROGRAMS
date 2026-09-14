@@ -1,0 +1,26 @@
+# Variables & types — a variable is just a labeled box.
+name = "Amna"       # string
+age = 20             # integer
+gpa = 3.8             # float
+is_student = True    # boolean
+
+# Printing & input
+print("Hello", name)
+x = input("Enter your name: ")
+
+#Operators
+5 + 3
+5 - 3
+5 * 3
+5 / 3
+5 // 3
+5 % 3
+5 ** 2
+# add, sub, mul, true-div, floor-div, remainder, power
+
+#Strings
+s = "Lahore"
+s.upper()          # 'LAHORE'
+s[0]                # 'L'  (indexing)
+s[0:3]              # 'Lah' (slicing)
+f"City: {s}"        # f-strings — insert variables directly
