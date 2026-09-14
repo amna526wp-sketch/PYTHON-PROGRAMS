@@ -1,0 +1,13 @@
+# List — ordered, changeable
+fruits = ["apple", "banana"]
+fruits.append("mango")
+
+# Tuple — ordered, unchangeable
+point = (2, 3)
+
+# Dictionary — key:value pairs
+student = {"name": "Amna", "dept": "CS"}
+student["dept"]     # "CS"
+
+# Set — unique unordered items
+unique = {1, 2, 2, 3}   # {1, 2, 3}
